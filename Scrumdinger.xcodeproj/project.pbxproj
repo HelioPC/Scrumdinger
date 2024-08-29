@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7714E5792C808E1900AD72D7 /* ScrumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7714E5782C808E1900AD72D7 /* ScrumStore.swift */; };
 		77373AF92C18DB2800719E42 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77373AF82C18DB2800719E42 /* ThemeView.swift */; };
 		77373AFB2C18E2AB00719E42 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77373AFA2C18E2AB00719E42 /* ThemePicker.swift */; };
 		7752DB472BFD66A1003DC943 /* ScrumdingerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7752DB462BFD66A1003DC943 /* ScrumdingerApp.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7714E5782C808E1900AD72D7 /* ScrumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumStore.swift; sourceTree = "<group>"; };
 		77373AF82C18DB2800719E42 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		77373AFA2C18E2AB00719E42 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
 		7752DB432BFD66A1003DC943 /* Scrumdinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrumdinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 				77F243152C796592004E80BD /* ScrumProgressViewStyle.swift */,
 				77F243192C79FBF8004E80BD /* MeetingFooterView.swift */,
 				77F243202C7B5B99004E80BD /* NewScrumSheet.swift */,
+				7714E5782C808E1900AD72D7 /* ScrumStore.swift */,
 			);
 			path = Scrumdinger;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				77F2431A2C79FBF8004E80BD /* MeetingFooterView.swift in Sources */,
 				77F2431C2C7A24D1004E80BD /* AVPlayerDing.swift in Sources */,
 				77F243182C79669A004E80BD /* ScrumTimer.swift in Sources */,
+				7714E5792C808E1900AD72D7 /* ScrumStore.swift in Sources */,
 				7775ED872C006897008A1DE4 /* DailyScrum.swift in Sources */,
 				778382FB2C031540003126A0 /* DetailView.swift in Sources */,
 				77F243142C7962A2004E80BD /* MeetingHeaderView.swift in Sources */,
