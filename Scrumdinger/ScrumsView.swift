@@ -14,28 +14,26 @@ struct ScrumsView: View {
     let saveAction: ()->Void
     
     var body: some View {
-        NavigationStack {
-            List($scrums) { $scrum in
-                NavigationLink(destination: DetailView(scrum: $scrum)) {
-                    CardView(scrum: scrum)
-                }
-                .listRowBackground(scrum.theme.mainColor)
+        if #available(iOS 16.0, *) {
+            NavigationStack {
+                ScrumListView(scrums: $scrums, isPresentingNewScrumView: $isPresentingNewScrumView)
             }
-            .navigationTitle("Daily Scrums")
-            .toolbar {
-                Button(action: {
-                    isPresentingNewScrumView = true
-                }) {
-                    Image(systemName: "plus.circle")
-                }
+            .sheet(isPresented: $isPresentingNewScrumView) {
+                NewScrumSheet(scrums: $scrums, isPresentingNewScrumView: $isPresentingNewScrumView)
             }
-            .accessibilityLabel("New Scrum")
-        }
-        .sheet(isPresented: $isPresentingNewScrumView) {
-            NewScrumSheet(scrums: $scrums, isPresentingNewScrumView: $isPresentingNewScrumView)
-        }
-        .onChange(of: scenePhase) { phase in
-            if phase == .inactive { saveAction() }
+            .onChange(of: scenePhase) { phase in
+                if phase == .inactive { saveAction() }
+            }
+        } else {
+            NavigationView {
+                ScrumListView(scrums: $scrums, isPresentingNewScrumView: $isPresentingNewScrumView)
+            }
+            .sheet(isPresented: $isPresentingNewScrumView) {
+                NewScrumSheet(scrums: $scrums, isPresentingNewScrumView: $isPresentingNewScrumView)
+            }
+            .onChange(of: scenePhase) { phase in
+                if phase == .inactive { saveAction() }
+            }
         }
     }
 }
